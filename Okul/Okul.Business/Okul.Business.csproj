@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="DataProctection\" />
+    <None Remove="Operations\" />
+    <None Remove="Operations\Ogrenci\" />
+    <None Remove="Types\" />
+    <None Remove="Operations\Ogrenci\Dtos\" />
+    <None Remove="Operations\Bolum\" />
+    <None Remove="Operations\Bolum\Dtos\" />
+    <None Remove="Operations\Ogretmen\" />
+    <None Remove="Operations\Ogretmen\Dtos\" />
+    <None Remove="Operations\Ders\" />
+    <None Remove="Operations\Not\" />
+    <None Remove="Operations\Ders\Dtos\" />
+    <None Remove="Operations\Not\Dtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="DataProctection\" />
+    <Folder Include="Operations\" />
+    <Folder Include="Operations\Ogrenci\" />
+    <Folder Include="Types\" />
+    <Folder Include="Operations\Ogrenci\Dtos\" />
+    <Folder Include="Operations\Bolum\" />
+    <Folder Include="Operations\Bolum\Dtos\" />
+    <Folder Include="Operations\Ogretmen\" />
+    <Folder Include="Operations\Ogretmen\Dtos\" />
+    <Folder Include="Operations\Ders\" />
+    <Folder Include="Operations\Not\" />
+    <Folder Include="Operations\Ders\Dtos\" />
+    <Folder Include="Operations\Not\Dtos\" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.DataProtection" Version="9.0.6" />
+    <PackageReference Include="System.Security.Cryptography.ProtectedData" Version="7.0.0" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Okul.Data\Okul.Data.csproj" />
+  </ItemGroup>
+</Project>

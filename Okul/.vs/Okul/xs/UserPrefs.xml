@@ -1,0 +1,71 @@
+﻿<Properties StartupConfiguration="{1E6EE3E4-23FF-4836-9B07-9441A287B706}|https">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Okul.Web/Controllers/OgrenciController.cs">
+    <Files>
+      <File FileName="Okul.Business/Class1.cs" Line="1" Column="1" />
+      <File FileName="Okul.Web/Program.cs" Line="13" Column="63" />
+      <File FileName="Okul.Web/appsettings.json" Line="14" Column="1" />
+      <File FileName="Okul.Data/Models/Bolumler.cs" Line="12" Column="1" />
+      <File FileName="Okul.Data/Models/Dersler.cs" Line="18" Column="1" />
+      <File FileName="Okul.Data/Models/Notlar.cs" Line="6" Column="1" />
+      <File FileName="Okul.Data/Models/Ogrenciler.cs" Line="5" Column="1" />
+      <File FileName="Okul.Data/Models/Ogretmenler.cs" Line="16" Column="1" />
+      <File FileName="Okul.Data/Models/OkulDbContext.cs" Line="51" Column="62" />
+      <File FileName="Okul.Data/Repository/Repository.cs" Line="79" Column="1" />
+      <File FileName="Okul.Data/Repository/IRepository.cs" Line="24" Column="1" />
+      <File FileName="Okul.Data/UnitOfWork/UnitOfWork.cs" Line="42" Column="10" />
+      <File FileName="Okul.Data/UnitOfWork/IUnitOfWork.cs" Line="16" Column="1" />
+      <File FileName="Okul.Business/DataProctection/DataProtection.cs" Line="26" Column="2" />
+      <File FileName="Okul.Business/DataProctection/IDataProtection.cs" Line="9" Column="2" />
+      <File FileName="Okul.Web/Controllers/OgrenciController.cs" Line="56" Column="50" />
+      <File FileName="Okul.Web/Views/Ogrenci/Index.cshtml" Line="9" Column="4" />
+      <File FileName="Okul.Web/Views/Ogrenci/Create.cshtml" Line="13" Column="23" />
+      <File FileName="Okul.Web/Views/Ogrenci/Edit.cshtml" Line="5" Column="2" />
+      <File FileName="Okul.Web/Views/Ogrenci/Details.cshtml" Line="4" Column="41" />
+      <File FileName="Okul.Business/Operations/Ogrenci/IOgrenciService.cs" Line="15" Column="1" />
+      <File FileName="Okul.Business/Operations/Ogrenci/OgrenciManager.cs" Line="47" Column="10" />
+      <File FileName="Okul.Web/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Okul.Business/Types/ServiceMessage.cs" Line="20" Column="1" />
+      <File FileName="Okul.Business/Operations/Ogrenci/Dtos/AddOgrenciDto.cs" Line="9" Column="6" />
+      <File FileName="Okul.Business/Operations/Bolum/IBolumService.cs" Line="8" Column="44" />
+      <File FileName="Okul.Business/Operations/Bolum/IBolumManager.cs" Line="22" Column="10" />
+      <File FileName="Okul.Web/Views/_ViewStart.cshtml" Line="2" Column="1" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="Okul" expanded="True" selected="True">
+            <Node name="Okul.Business" expanded="True">
+              <Node name="DataProctection" expanded="True" />
+              <Node name="Operations" expanded="True">
+                <Node name="Bolum" expanded="True" />
+                <Node name="Ogrenci" expanded="True">
+                  <Node name="Dtos" expanded="True" />
+                </Node>
+              </Node>
+              <Node name="Types" expanded="True" />
+            </Node>
+            <Node name="Okul.Data" expanded="True">
+              <Node name="Models" expanded="True" />
+              <Node name="Repository" expanded="True" />
+              <Node name="UnitOfWork" expanded="True" />
+            </Node>
+            <Node name="Okul.Web" expanded="True">
+              <Node name="Controllers" expanded="True" />
+              <Node name="Models" expanded="True" />
+              <Node name="Views" expanded="True">
+                <Node name="Ogrenci" expanded="True" />
+              </Node>
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.Okul.Web PreferredExecutionTarget="/Applications/Google Chrome.app" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>

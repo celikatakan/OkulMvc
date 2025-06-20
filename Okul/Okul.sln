@@ -1,0 +1,37 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 25.0.1706.14
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okul.Web", "Okul.Web\Okul.Web.csproj", "{1E6EE3E4-23FF-4836-9B07-9441A287B706}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okul.Data", "Okul.Data\Okul.Data.csproj", "{263A930F-1762-469B-8FF5-6C2AFB18A322}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Okul.Business", "Okul.Business\Okul.Business.csproj", "{2D2FD9ED-CD34-4432-BD0E-5AC0BB6EC730}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1E6EE3E4-23FF-4836-9B07-9441A287B706}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1E6EE3E4-23FF-4836-9B07-9441A287B706}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1E6EE3E4-23FF-4836-9B07-9441A287B706}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1E6EE3E4-23FF-4836-9B07-9441A287B706}.Release|Any CPU.Build.0 = Release|Any CPU
+		{263A930F-1762-469B-8FF5-6C2AFB18A322}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{263A930F-1762-469B-8FF5-6C2AFB18A322}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{263A930F-1762-469B-8FF5-6C2AFB18A322}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{263A930F-1762-469B-8FF5-6C2AFB18A322}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2D2FD9ED-CD34-4432-BD0E-5AC0BB6EC730}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2D2FD9ED-CD34-4432-BD0E-5AC0BB6EC730}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2D2FD9ED-CD34-4432-BD0E-5AC0BB6EC730}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2D2FD9ED-CD34-4432-BD0E-5AC0BB6EC730}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {46F521C3-37D3-4B28-8234-98BBC5BA4393}
+	EndGlobalSection
+EndGlobal

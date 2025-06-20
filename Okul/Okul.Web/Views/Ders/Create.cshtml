@@ -1,0 +1,31 @@
+﻿@model Okul.Data.Models.Dersler 
+
+@{
+    ViewData["Title"] = "Yeni Ders Ekle";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+
+   
+    <div class="form-group">
+        <label asp-for="DersAdi"></label>
+        <input asp-for="DersAdi" class="form-control" />
+        <span asp-validation-for="DersAdi" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="OgretmenId">Öğretmen</label>
+        <select asp-for="OgretmenId" asp-items="(SelectList)ViewBag.Ogretmenler" class="form-control">
+            <option value="">-- Öğretmen Seçiniz --</option>
+        </select>
+        <span asp-validation-for="OgretmenId" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

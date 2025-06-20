@@ -1,0 +1,23 @@
+﻿@model Okul.Data.Models.Bolumler
+
+@{
+    ViewData["Title"] = "Yeni Bölüm Ekle";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Create" method="post">
+
+    <div class="form-group">
+        <label asp-for="BolumAdi"></label>
+        <input asp-for="BolumAdi" class="form-control" />
+        <span asp-validation-for="BolumAdi" class="text-danger"></span>
+    </div>
+
+    <button type="submit" class="btn btn-primary">Ekle</button>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

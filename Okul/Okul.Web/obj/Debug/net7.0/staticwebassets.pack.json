@@ -1,0 +1,1149 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/obj/Debug/net7.0/scopedcss/projectbundle/Okul.Web.bundle.scp.css",
+      "PackagePath": "staticwebassets/Okul.Web.bundle.scp.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/.DS_Store",
+      "PackagePath": "staticwebassets/.DS_Store"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/composer.json",
+      "PackagePath": "staticwebassets/composer.json"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/css/site.css",
+      "PackagePath": "staticwebassets/css/site.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/.DS_Store",
+      "PackagePath": "staticwebassets/dist/.DS_Store"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/.DS_Store",
+      "PackagePath": "staticwebassets/dist/assets/.DS_Store"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/AdminLTEFullLogo.png",
+      "PackagePath": "staticwebassets/dist/assets/img/AdminLTEFullLogo.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/AdminLTELogo.png",
+      "PackagePath": "staticwebassets/dist/assets/img/AdminLTELogo.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/avatar.png",
+      "PackagePath": "staticwebassets/dist/assets/img/avatar.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/avatar2.png",
+      "PackagePath": "staticwebassets/dist/assets/img/avatar2.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/avatar3.png",
+      "PackagePath": "staticwebassets/dist/assets/img/avatar3.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/avatar4.png",
+      "PackagePath": "staticwebassets/dist/assets/img/avatar4.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/avatar5.png",
+      "PackagePath": "staticwebassets/dist/assets/img/avatar5.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/boxed-bg.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/boxed-bg.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/boxed-bg.png",
+      "PackagePath": "staticwebassets/dist/assets/img/boxed-bg.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/credit/american-express.png",
+      "PackagePath": "staticwebassets/dist/assets/img/credit/american-express.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/credit/cirrus.png",
+      "PackagePath": "staticwebassets/dist/assets/img/credit/cirrus.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/credit/mastercard.png",
+      "PackagePath": "staticwebassets/dist/assets/img/credit/mastercard.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/credit/paypal.png",
+      "PackagePath": "staticwebassets/dist/assets/img/credit/paypal.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/credit/paypal2.png",
+      "PackagePath": "staticwebassets/dist/assets/img/credit/paypal2.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/credit/visa.png",
+      "PackagePath": "staticwebassets/dist/assets/img/credit/visa.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/default-150x150.png",
+      "PackagePath": "staticwebassets/dist/assets/img/default-150x150.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/icons.png",
+      "PackagePath": "staticwebassets/dist/assets/img/icons.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/photo1.png",
+      "PackagePath": "staticwebassets/dist/assets/img/photo1.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/photo2.png",
+      "PackagePath": "staticwebassets/dist/assets/img/photo2.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/photo3.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/photo3.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/photo4.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/photo4.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/prod-1.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/prod-1.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/prod-2.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/prod-2.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/prod-3.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/prod-3.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/prod-4.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/prod-4.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/prod-5.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/prod-5.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user1-128x128.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user1-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user2-160x160.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user2-160x160.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user3-128x128.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user3-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user4-128x128.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user4-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user5-128x128.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user5-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user6-128x128.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user6-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user7-128x128.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user7-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/assets/img/user8-128x128.jpg",
+      "PackagePath": "staticwebassets/dist/assets/img/user8-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.css",
+      "PackagePath": "staticwebassets/dist/css/adminlte.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.css.map",
+      "PackagePath": "staticwebassets/dist/css/adminlte.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.min.css",
+      "PackagePath": "staticwebassets/dist/css/adminlte.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.min.css.map",
+      "PackagePath": "staticwebassets/dist/css/adminlte.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.rtl.css",
+      "PackagePath": "staticwebassets/dist/css/adminlte.rtl.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.rtl.css.map",
+      "PackagePath": "staticwebassets/dist/css/adminlte.rtl.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.rtl.min.css",
+      "PackagePath": "staticwebassets/dist/css/adminlte.rtl.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/css/adminlte.rtl.min.css.map",
+      "PackagePath": "staticwebassets/dist/css/adminlte.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/js/adminlte.js",
+      "PackagePath": "staticwebassets/dist/js/adminlte.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/js/adminlte.js.map",
+      "PackagePath": "staticwebassets/dist/js/adminlte.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/js/adminlte.min.js",
+      "PackagePath": "staticwebassets/dist/js/adminlte.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/js/adminlte.min.js.map",
+      "PackagePath": "staticwebassets/dist/js/adminlte.min.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/UI/general.html",
+      "PackagePath": "staticwebassets/dist/pages/UI/general.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/UI/icons.html",
+      "PackagePath": "staticwebassets/dist/pages/UI/icons.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/UI/timeline.html",
+      "PackagePath": "staticwebassets/dist/pages/UI/timeline.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/browser-support.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/browser-support.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/color-mode.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/color-mode.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/components/main-header.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/components/main-header.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/components/main-sidebar.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/components/main-sidebar.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/faq.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/faq.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/how-to-contribute.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/how-to-contribute.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/introduction.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/introduction.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/javascript/treeview.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/javascript/treeview.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/layout.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/layout.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/docs/license.html",
+      "PackagePath": "staticwebassets/dist/pages/docs/license.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/examples/lockscreen.html",
+      "PackagePath": "staticwebassets/dist/pages/examples/lockscreen.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/examples/login-v2.html",
+      "PackagePath": "staticwebassets/dist/pages/examples/login-v2.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/examples/login.html",
+      "PackagePath": "staticwebassets/dist/pages/examples/login.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/examples/register-v2.html",
+      "PackagePath": "staticwebassets/dist/pages/examples/register-v2.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/examples/register.html",
+      "PackagePath": "staticwebassets/dist/pages/examples/register.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/forms/general.html",
+      "PackagePath": "staticwebassets/dist/pages/forms/general.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/generate/theme.html",
+      "PackagePath": "staticwebassets/dist/pages/generate/theme.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/index.html",
+      "PackagePath": "staticwebassets/dist/pages/index.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/index2.html",
+      "PackagePath": "staticwebassets/dist/pages/index2.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/index3.html",
+      "PackagePath": "staticwebassets/dist/pages/index3.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/layout/collapsed-sidebar.html",
+      "PackagePath": "staticwebassets/dist/pages/layout/collapsed-sidebar.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/layout/fixed-sidebar.html",
+      "PackagePath": "staticwebassets/dist/pages/layout/fixed-sidebar.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/layout/layout-custom-area.html",
+      "PackagePath": "staticwebassets/dist/pages/layout/layout-custom-area.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/layout/layout-rtl.html",
+      "PackagePath": "staticwebassets/dist/pages/layout/layout-rtl.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/layout/logo-switch.html",
+      "PackagePath": "staticwebassets/dist/pages/layout/logo-switch.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/layout/sidebar-mini.html",
+      "PackagePath": "staticwebassets/dist/pages/layout/sidebar-mini.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/layout/unfixed-sidebar.html",
+      "PackagePath": "staticwebassets/dist/pages/layout/unfixed-sidebar.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/tables/simple.html",
+      "PackagePath": "staticwebassets/dist/pages/tables/simple.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/widgets/cards.html",
+      "PackagePath": "staticwebassets/dist/pages/widgets/cards.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/widgets/info-box.html",
+      "PackagePath": "staticwebassets/dist/pages/widgets/info-box.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/dist/pages/widgets/small-box.html",
+      "PackagePath": "staticwebassets/dist/pages/widgets/small-box.html"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/favicon.ico",
+      "PackagePath": "staticwebassets/favicon.ico"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/js/site.js",
+      "PackagePath": "staticwebassets/js/site.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/LICENSE",
+      "PackagePath": "staticwebassets/lib/bootstrap"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/css/bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/bootstrap/dist/js/bootstrap.min.js.map",
+      "PackagePath": "staticwebassets/lib/bootstrap/dist/js/bootstrap.min.js.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation-unobtrusive/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation-unobtrusive/jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation/LICENSE.md",
+      "PackagePath": "staticwebassets/lib/jquery-validation/LICENSE.md"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation/dist/additional-methods.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation/dist/additional-methods.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/additional-methods.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery-validation/dist/jquery.validate.min.js",
+      "PackagePath": "staticwebassets/lib/jquery-validation/dist/jquery.validate.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery/LICENSE.txt",
+      "PackagePath": "staticwebassets/lib/jquery/LICENSE.txt"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery/dist/jquery.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery/dist/jquery.min.js",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/lib/jquery/dist/jquery.min.map",
+      "PackagePath": "staticwebassets/lib/jquery/dist/jquery.min.map"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/package-lock.json",
+      "PackagePath": "staticwebassets/package-lock.json"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/package.json",
+      "PackagePath": "staticwebassets/package.json"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/.DS_Store",
+      "PackagePath": "staticwebassets/src/.DS_Store"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/AdminLTEFullLogo.png",
+      "PackagePath": "staticwebassets/src/assets/img/AdminLTEFullLogo.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/AdminLTELogo.png",
+      "PackagePath": "staticwebassets/src/assets/img/AdminLTELogo.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/avatar.png",
+      "PackagePath": "staticwebassets/src/assets/img/avatar.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/avatar2.png",
+      "PackagePath": "staticwebassets/src/assets/img/avatar2.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/avatar3.png",
+      "PackagePath": "staticwebassets/src/assets/img/avatar3.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/avatar4.png",
+      "PackagePath": "staticwebassets/src/assets/img/avatar4.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/avatar5.png",
+      "PackagePath": "staticwebassets/src/assets/img/avatar5.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/boxed-bg.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/boxed-bg.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/boxed-bg.png",
+      "PackagePath": "staticwebassets/src/assets/img/boxed-bg.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/credit/american-express.png",
+      "PackagePath": "staticwebassets/src/assets/img/credit/american-express.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/credit/cirrus.png",
+      "PackagePath": "staticwebassets/src/assets/img/credit/cirrus.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/credit/mastercard.png",
+      "PackagePath": "staticwebassets/src/assets/img/credit/mastercard.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/credit/paypal.png",
+      "PackagePath": "staticwebassets/src/assets/img/credit/paypal.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/credit/paypal2.png",
+      "PackagePath": "staticwebassets/src/assets/img/credit/paypal2.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/credit/visa.png",
+      "PackagePath": "staticwebassets/src/assets/img/credit/visa.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/default-150x150.png",
+      "PackagePath": "staticwebassets/src/assets/img/default-150x150.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/icons.png",
+      "PackagePath": "staticwebassets/src/assets/img/icons.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/photo1.png",
+      "PackagePath": "staticwebassets/src/assets/img/photo1.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/photo2.png",
+      "PackagePath": "staticwebassets/src/assets/img/photo2.png"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/photo3.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/photo3.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/photo4.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/photo4.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/prod-1.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/prod-1.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/prod-2.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/prod-2.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/prod-3.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/prod-3.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/prod-4.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/prod-4.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/prod-5.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/prod-5.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user1-128x128.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user1-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user2-160x160.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user2-160x160.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user3-128x128.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user3-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user4-128x128.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user4-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user5-128x128.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user5-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user6-128x128.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user6-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user7-128x128.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user7-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/assets/img/user8-128x128.jpg",
+      "PackagePath": "staticwebassets/src/assets/img/user8-128x128.jpg"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/config/assets.config.mjs",
+      "PackagePath": "staticwebassets/src/config/assets.config.mjs"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/config/astro.config.mjs",
+      "PackagePath": "staticwebassets/src/config/astro.config.mjs"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/config/postcss.config.mjs",
+      "PackagePath": "staticwebassets/src/config/postcss.config.mjs"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/config/rollup.config.js",
+      "PackagePath": "staticwebassets/src/config/rollup.config.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/.eslintrc.json",
+      "PackagePath": "staticwebassets/src/html/.eslintrc.json"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/.prettierrc.js",
+      "PackagePath": "staticwebassets/src/html/.prettierrc.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/.tsconfig.json",
+      "PackagePath": "staticwebassets/src/html/.tsconfig.json"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/_head.astro",
+      "PackagePath": "staticwebassets/src/html/components/_head.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/_scripts.astro",
+      "PackagePath": "staticwebassets/src/html/components/_scripts.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/dashboard/_footer.astro",
+      "PackagePath": "staticwebassets/src/html/components/dashboard/_footer.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/dashboard/_sidenav.astro",
+      "PackagePath": "staticwebassets/src/html/components/dashboard/_sidenav.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/dashboard/_topbar.astro",
+      "PackagePath": "staticwebassets/src/html/components/dashboard/_topbar.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/browser-support.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/browser-support.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/color-mode.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/color-mode.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/components/main-header.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/components/main-header.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/components/main-sidebar.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/components/main-sidebar.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/faq.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/faq.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/how-to-contribute.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/how-to-contribute.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/introduction.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/introduction.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/docs/license.mdx",
+      "PackagePath": "staticwebassets/src/html/components/docs/license.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/components/javascript/treeview.mdx",
+      "PackagePath": "staticwebassets/src/html/components/javascript/treeview.mdx"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/env.d.ts",
+      "PackagePath": "staticwebassets/src/html/env.d.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/UI/general.astro",
+      "PackagePath": "staticwebassets/src/html/pages/UI/general.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/UI/icons.astro",
+      "PackagePath": "staticwebassets/src/html/pages/UI/icons.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/UI/timeline.astro",
+      "PackagePath": "staticwebassets/src/html/pages/UI/timeline.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/browser-support.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/browser-support.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/color-mode.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/color-mode.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/components/main-header.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/components/main-header.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/components/main-sidebar.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/components/main-sidebar.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/faq.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/faq.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/how-to-contribute.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/how-to-contribute.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/introduction.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/introduction.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/javascript/treeview.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/javascript/treeview.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/layout.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/layout.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/docs/license.astro",
+      "PackagePath": "staticwebassets/src/html/pages/docs/license.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/examples/lockscreen.astro",
+      "PackagePath": "staticwebassets/src/html/pages/examples/lockscreen.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/examples/login-v2.astro",
+      "PackagePath": "staticwebassets/src/html/pages/examples/login-v2.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/examples/login.astro",
+      "PackagePath": "staticwebassets/src/html/pages/examples/login.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/examples/register-v2.astro",
+      "PackagePath": "staticwebassets/src/html/pages/examples/register-v2.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/examples/register.astro",
+      "PackagePath": "staticwebassets/src/html/pages/examples/register.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/forms/general.astro",
+      "PackagePath": "staticwebassets/src/html/pages/forms/general.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/generate/theme.astro",
+      "PackagePath": "staticwebassets/src/html/pages/generate/theme.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/index.astro",
+      "PackagePath": "staticwebassets/src/html/pages/index.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/index2.astro",
+      "PackagePath": "staticwebassets/src/html/pages/index2.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/index3.astro",
+      "PackagePath": "staticwebassets/src/html/pages/index3.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/layout/collapsed-sidebar.astro",
+      "PackagePath": "staticwebassets/src/html/pages/layout/collapsed-sidebar.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/layout/fixed-sidebar.astro",
+      "PackagePath": "staticwebassets/src/html/pages/layout/fixed-sidebar.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/layout/layout-custom-area.astro",
+      "PackagePath": "staticwebassets/src/html/pages/layout/layout-custom-area.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/layout/layout-rtl.astro",
+      "PackagePath": "staticwebassets/src/html/pages/layout/layout-rtl.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/layout/logo-switch.astro",
+      "PackagePath": "staticwebassets/src/html/pages/layout/logo-switch.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/layout/sidebar-mini.astro",
+      "PackagePath": "staticwebassets/src/html/pages/layout/sidebar-mini.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/layout/unfixed-sidebar.astro",
+      "PackagePath": "staticwebassets/src/html/pages/layout/unfixed-sidebar.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/tables/simple.astro",
+      "PackagePath": "staticwebassets/src/html/pages/tables/simple.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/widgets/cards.astro",
+      "PackagePath": "staticwebassets/src/html/pages/widgets/cards.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/widgets/info-box.astro",
+      "PackagePath": "staticwebassets/src/html/pages/widgets/info-box.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/html/pages/widgets/small-box.astro",
+      "PackagePath": "staticwebassets/src/html/pages/widgets/small-box.astro"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_app-content.scss",
+      "PackagePath": "staticwebassets/src/scss/_app-content.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_app-footer.scss",
+      "PackagePath": "staticwebassets/src/scss/_app-footer.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_app-header.scss",
+      "PackagePath": "staticwebassets/src/scss/_app-header.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_app-main.scss",
+      "PackagePath": "staticwebassets/src/scss/_app-main.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_app-sidebar.scss",
+      "PackagePath": "staticwebassets/src/scss/_app-sidebar.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_app-wrapper.scss",
+      "PackagePath": "staticwebassets/src/scss/_app-wrapper.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_bootstrap-variables.scss",
+      "PackagePath": "staticwebassets/src/scss/_bootstrap-variables.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_callouts.scss",
+      "PackagePath": "staticwebassets/src/scss/_callouts.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_cards.scss",
+      "PackagePath": "staticwebassets/src/scss/_cards.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_compact-mode.scss",
+      "PackagePath": "staticwebassets/src/scss/_compact-mode.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_direct-chat.scss",
+      "PackagePath": "staticwebassets/src/scss/_direct-chat.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_docs.scss",
+      "PackagePath": "staticwebassets/src/scss/_docs.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_dropdown.scss",
+      "PackagePath": "staticwebassets/src/scss/_dropdown.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_info-box.scss",
+      "PackagePath": "staticwebassets/src/scss/_info-box.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_miscellaneous.scss",
+      "PackagePath": "staticwebassets/src/scss/_miscellaneous.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_mixins.scss",
+      "PackagePath": "staticwebassets/src/scss/_mixins.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_progress-bars.scss",
+      "PackagePath": "staticwebassets/src/scss/_progress-bars.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_root.scss",
+      "PackagePath": "staticwebassets/src/scss/_root.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_small-box.scss",
+      "PackagePath": "staticwebassets/src/scss/_small-box.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_table.scss",
+      "PackagePath": "staticwebassets/src/scss/_table.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_timeline.scss",
+      "PackagePath": "staticwebassets/src/scss/_timeline.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_toasts.scss",
+      "PackagePath": "staticwebassets/src/scss/_toasts.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_variables-dark.scss",
+      "PackagePath": "staticwebassets/src/scss/_variables-dark.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/_variables.scss",
+      "PackagePath": "staticwebassets/src/scss/_variables.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/adminlte.scss",
+      "PackagePath": "staticwebassets/src/scss/adminlte.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/mixins/_animations.scss",
+      "PackagePath": "staticwebassets/src/scss/mixins/_animations.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/mixins/_scrollbar.scss",
+      "PackagePath": "staticwebassets/src/scss/mixins/_scrollbar.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/pages/_lockscreen.scss",
+      "PackagePath": "staticwebassets/src/scss/pages/_lockscreen.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/pages/_login_and_register.scss",
+      "PackagePath": "staticwebassets/src/scss/pages/_login_and_register.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/parts/_components.scss",
+      "PackagePath": "staticwebassets/src/scss/parts/_components.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/parts/_core.scss",
+      "PackagePath": "staticwebassets/src/scss/parts/_core.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/parts/_extra-components.scss",
+      "PackagePath": "staticwebassets/src/scss/parts/_extra-components.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/parts/_miscellaneous.scss",
+      "PackagePath": "staticwebassets/src/scss/parts/_miscellaneous.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/scss/parts/_pages.scss",
+      "PackagePath": "staticwebassets/src/scss/parts/_pages.scss"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/adminlte.ts",
+      "PackagePath": "staticwebassets/src/ts/adminlte.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/card-widget.ts",
+      "PackagePath": "staticwebassets/src/ts/card-widget.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/direct-chat.ts",
+      "PackagePath": "staticwebassets/src/ts/direct-chat.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/fullscreen.ts",
+      "PackagePath": "staticwebassets/src/ts/fullscreen.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/layout.ts",
+      "PackagePath": "staticwebassets/src/ts/layout.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/push-menu.ts",
+      "PackagePath": "staticwebassets/src/ts/push-menu.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/treeview.ts",
+      "PackagePath": "staticwebassets/src/ts/treeview.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/ts/util/index.ts",
+      "PackagePath": "staticwebassets/src/ts/util/index.ts"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/src/utils/index.js",
+      "PackagePath": "staticwebassets/src/utils/index.js"
+    },
+    {
+      "Id": "/Users/a1-07/Projects/Okul/Okul.Web/wwwroot/tsconfig.json",
+      "PackagePath": "staticwebassets/tsconfig.json"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.Okul.Web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.build.Okul.Web.props",
+      "PackagePath": "build\\Okul.Web.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.Okul.Web.props",
+      "PackagePath": "buildMultiTargeting\\Okul.Web.props"
+    },
+    {
+      "Id": "obj/Debug/net7.0/staticwebassets/msbuild.buildTransitive.Okul.Web.props",
+      "PackagePath": "buildTransitive\\Okul.Web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

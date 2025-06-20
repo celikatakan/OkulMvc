@@ -1,0 +1,52 @@
+﻿@model Okul.Data.Models.Notlar
+
+@{
+    ViewData["Title"] = "Notu Güncelle";
+}
+
+<h2>@ViewData["Title"]</h2>
+
+<form asp-action="Edit" method="post">
+
+    <div class="form-group">
+        <label asp-for="OgrenciId">Öğrenci</label>
+        <select asp-for="OgrenciId" asp-items="(SelectList)ViewBag.Ogrenciler" class="form-control">
+            <option value="">-- Öğrenci Seçiniz --</option>
+        </select>
+        <span asp-validation-for="OgrenciId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="DersId">Dersler</label>
+        <select asp-for="DersId" asp-items="(SelectList)ViewBag.Dersler" class="form-control">
+            <option value="">-- Ders Seçiniz --</option>
+        </select>
+        <span asp-validation-for="DersId" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Sinav1"></label>
+        <input asp-for="Sinav1" class="form-control" />
+        <span asp-validation-for="Sinav1" class="text-danger"></span>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="Sinav2"></label>
+        <input asp-for="Sinav2" class="form-control" />
+        <span asp-validation-for="Sinav2" class="text-danger"></span>
+    </div>
+    <div class="form-group">
+        <label asp-for="FinalNotu"></label>
+        <input asp-for="FinalNotu" class="form-control" />
+        <span asp-validation-for="FinalNotu" class="text-danger"></span>
+    </div>
+
+
+
+    <button type="submit" class="btn btn-primary">Güncelle</button>
+
+</form>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

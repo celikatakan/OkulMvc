@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'https' " />
+  <PropertyGroup Condition=" '$(RunConfiguration)' == 'http' " />
+  <ItemGroup>
+    <ProjectReference Include="..\Okul.Data\Okul.Data.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+    <ProjectReference Include="..\Okul.Business\Okul.Business.csproj">
+      <GlobalPropertiesToRemove></GlobalPropertiesToRemove>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="Views\Ogrenci\" />
+    <None Remove="Views\Bolum\" />
+    <None Remove="Views\Ogretmen\" />
+    <None Remove="Views\Ders\" />
+    <None Remove="Views\Not\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Ogrenci\" />
+    <Folder Include="Views\Bolum\" />
+    <Folder Include="Views\Ogretmen\" />
+    <Folder Include="Views\Ders\" />
+    <Folder Include="Views\Not\" />
+  </ItemGroup>
+</Project>
