@@ -1,7 +1,7 @@
 
 # Okul Yönetim Sistemi - MVC Projesi
 
-Bu proje, ASP.NET Core MVC kullanılarak geliştirilmiş basit bir okul yönetim sistemi örneğidir.  
+Bu proje, ASP.NET Core MVC kullanılarak geliştirilmiş bir okul yönetim sistemi örneğidir.  
 Proje, Entity Framework Core ile veritabanı işlemlerini gerçekleştiren Entity sınıflarına, UnitOfWork, Repository ve Service katmanlarına sahiptir.
 
 ---
