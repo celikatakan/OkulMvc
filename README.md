@@ -7,11 +7,14 @@ Proje, Entity Framework Core ile veritabanı işlemlerini gerçekleştiren Entit
 ---
 
 <img width="2240" alt="Image" src="https://github.com/user-attachments/assets/0253f46a-5e59-4206-8ab2-d5f0b94f7f64" />
----
+
+
 <img width="2240" alt="Image" src="https://github.com/user-attachments/assets/c75ee09d-5d71-4c1e-adcf-e5d88d89eb58" />
----
+
+
 <img width="2240" alt="Image" src="https://github.com/user-attachments/assets/28ea81fe-d767-45a3-ba56-f2bb6dfbb046" />
----
+
+
 <img width="2238" alt="Image" src="https://github.com/user-attachments/assets/b7977d84-6372-41d5-9f9a-d2835f95c744" />
 
 
