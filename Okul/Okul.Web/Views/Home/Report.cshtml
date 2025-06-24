@@ -1,0 +1,410 @@
+﻿@model Okul.Web.Models.ViewModels.ReportViewModel
+@{
+    ViewData["Title"] = "Raporlar";
+}
+<link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+<style>
+        :root {
+            --primary-color: #4f46e5;
+            --secondary-color: #f8fafc;
+            --accent-color: #06b6d4;
+            --text-primary: #1e293b;
+            --text-secondary: #64748b;
+            --border-color: #e2e8f0;
+            --success-color: #10b981;
+            --warning-color: #f59e0b;
+            --danger-color: #ef4444;
+        }
+
+    body {
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        min-height: 100vh;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 70px;
+    }
+
+        .main-container {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 20px;
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+            margin: 2rem auto;
+            max-width: 1200px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+
+        .page-header {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 2rem;
+            border-radius: 16px;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .page-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            animation: rotate 20s linear infinite;
+        }
+
+        @@keyframes rotate {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .page-header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .page-header .subtitle {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .report-section {
+            background: white;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+            border: 1px solid var(--border-color);
+            transition: all 0.3s ease;
+        }
+
+        .report-section:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.15);
+        }
+
+        .section-header {
+            display: flex;
+            align-items: center;
+            margin-bottom: 1.5rem;
+            padding-bottom: 1rem;
+            border-bottom: 2px solid var(--secondary-color);
+        }
+
+        .section-icon {
+            width: 48px;
+            height: 48px;
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 1rem;
+            font-size: 1.2rem;
+        }
+
+        .section-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            color: var(--text-primary);
+            margin: 0;
+        }
+
+        .modern-table {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+            border: none;
+        }
+
+        .modern-table thead th {
+            background: linear-gradient(135deg, var(--primary-color), var(--accent-color));
+            color: white;
+            font-weight: 600;
+            border: none;
+            padding: 1rem;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .modern-table tbody tr {
+            transition: all 0.2s ease;
+            border: none;
+        }
+
+        .modern-table tbody tr:hover {
+            background: rgba(79, 70, 229, 0.05);
+            transform: scale(1.01);
+        }
+
+        .modern-table tbody td {
+            padding: 1rem;
+            border: none;
+            color: var(--text-primary);
+            font-weight: 500;
+            vertical-align: middle;
+        }
+
+        .modern-table tbody tr:not(:last-child) td {
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .stat-badge {
+            background: linear-gradient(135deg, var(--success-color), #34d399);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .danger-badge {
+            background: linear-gradient(135deg, var(--danger-color), #f87171);
+            color: white;
+            padding: 0.4rem 0.8rem;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-block;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 3rem 2rem;
+            color: var(--text-secondary);
+        }
+
+        .empty-state i {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            color: var(--accent-color);
+        }
+
+        .empty-state h4 {
+            color: var(--text-primary);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 12px;
+            padding: 1rem;
+            text-align: center;
+            margin-bottom: 1rem;
+        }
+
+        .metric-value {
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .metric-label {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        @@media (max-width: 768px) {
+            .main-container {
+                margin: 1rem;
+                padding: 1rem;
+            }
+
+            .page-header h1 {
+                font-size: 2rem;
+            }
+
+            .section-header {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            .section-icon {
+                margin-right: 0;
+                margin-bottom: 0.5rem;
+            }
+        }
+</style>
+
+<div class="container-fluid">
+    <div class="main-container">
+        <!-- Page Header -->
+        <div class="page-header">
+            <h1><i class="fas fa-chart-line me-3"></i>Raporlar</h1>
+            <p class="subtitle">Akademik performans ve istatistiksel analiz raporları</p>
+        </div>
+
+        <!-- 1. Bölüm Bazında Öğrenci Sayıları -->
+        <div class="report-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="section-title">Bölüm Bazında Öğrenci Sayıları</h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table modern-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-graduation-cap me-2"></i>Bölüm Adı</th>
+                            <th><i class="fas fa-user-friends me-2"></i>Öğrenci Sayısı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.BolumOgrenciSayilari)
+                        {
+                            <tr>
+                                <td>@item.BolumAdi</td>
+                                <td><span class="stat-badge">@item.OgrenciSayisi</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 2. Öğretmen Bazında Ders Sayısı -->
+        <div class="report-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chalkboard-teacher"></i>
+                </div>
+                <h3 class="section-title">Öğretmen Bazında Ders Sayısı</h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table modern-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-user-tie me-2"></i>Öğretmen Adı</th>
+                            <th><i class="fas fa-book me-2"></i>Ders Sayısı</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OgretmenDersSayilari)
+                        {
+                            <tr>
+                                <td>@item.OgretmenAdi</td>
+                                <td><span class="stat-badge">@item.DersSayisi</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 3. Öğrenci Not Ortalamaları -->
+        <div class="report-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-trophy"></i>
+                </div>
+                <h3 class="section-title">Öğrencilerin Not Ortalamaları</h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table modern-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-user-graduate me-2"></i>Öğrenci Adı</th>
+                            <th><i class="fas fa-star me-2"></i>Ortalama Not</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.OgrenciNotOrtalamalari)
+                        {
+                            <tr>
+                                <td>@item.OgrenciAdi</td>
+                                <td><span class="stat-badge">@item.Ortalama.ToString("0.00")</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 4. Ders Bazında Ortalama Notlar -->
+        <div class="report-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-chart-bar"></i>
+                </div>
+                <h3 class="section-title">Ders Bazında Ortalama Notlar</h3>
+            </div>
+            <div class="table-responsive">
+                <table class="table modern-table">
+                    <thead>
+                        <tr>
+                            <th><i class="fas fa-book-open me-2"></i>Ders Adı</th>
+                            <th><i class="fas fa-calculator me-2"></i>Ortalama Not</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        @foreach (var item in Model.DersOrtalamaNotlari)
+                        {
+                            <tr>
+                                <td>@item.DersAdi</td>
+                                <td><span class="stat-badge">@item.OrtalamaNot.ToString("0.00")</span></td>
+                            </tr>
+                        }
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+        <!-- 5. Final Notu Düşük Öğrenciler -->
+        <div class="report-section">
+            <div class="section-header">
+                <div class="section-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h3 class="section-title">Final Notu 50'nin Altında Olan Öğrenciler</h3>
+            </div>
+
+            @if (Model.FinalNotuDusukOgrenciler != null && Model.FinalNotuDusukOgrenciler.Any())
+            {
+                <div class="table-responsive">
+                    <table class="table modern-table">
+                        <thead>
+                            <tr>
+                                <th><i class="fas fa-user-graduate me-2"></i>Öğrenci Adı</th>
+                                <th><i class="fas fa-book me-2"></i>Ders Adı</th>
+                                <th><i class="fas fa-exclamation-circle me-2"></i>Final Notu</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var item in Model.FinalNotuDusukOgrenciler)
+                            {
+                                <tr>
+                                    <td>@item.OgrenciAdi</td>
+                                    <td>@item.DersAdi</td>
+                                    <td><span class="danger-badge">@item.FinalNotu</span></td>
+                                </tr>
+                            }
+                        </tbody>
+                    </table>
+                </div>
+            }
+            else
+            {
+                <div class="empty-state">
+                    <i class="fas fa-check-circle"></i>
+                    <h4>Mükemmel Sonuçlar!</h4>
+                    <p>Final notu 50'nin altında olan öğrenci bulunmamaktadır.</p>
+                </div>
+            }
+        </div>
+    </div>
+</div>

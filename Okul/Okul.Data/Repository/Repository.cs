@@ -21,6 +21,20 @@ namespace Okul.Data.Repository
             _dbSet.Add(entity);
         }
 
+        public int Count(Expression<Func<TEntity, bool>> predicate = null)
+        {
+            var query = _dbSet.AsQueryable();
+
+            // Soft delete filtresi uygula (IsDeleted == false varsa)
+            var prop = typeof(TEntity).GetProperty("IsDeleted");
+            if (prop != null)
+            {
+                query = query.Where(e => EF.Property<bool>(e, "IsDeleted") == false);
+            }
+
+            return predicate != null ? query.Count(predicate) : query.Count();
+        }
+
         public void Delete(TEntity entity, bool softDelete = true)
         {
             // Eğer soft delete alanı varsa, yansıtılabilir; yoksa doğrudan silinir.

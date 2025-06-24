@@ -14,6 +14,7 @@ namespace Okul.Business.Operations.Ogrenci
         Ogrenciler GetById(int id);
         Task<bool> DeleteOgrenci(Ogrenciler ogrenci, bool softDelete = true);
         Task<IEnumerable<Ogrenciler>> GetAllAsync();
+        int Count();
     }
 }
 

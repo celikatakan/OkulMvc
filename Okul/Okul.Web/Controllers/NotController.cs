@@ -31,6 +31,7 @@ namespace Okul.Web.Controllers
 
         public async Task<ActionResult> Index()
         {
+            ViewBag.ToplamNot = _notService.Count();
             var notlar = await _notService.GetAllNotlar();
             return View(notlar);
         }

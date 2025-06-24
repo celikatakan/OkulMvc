@@ -46,6 +46,11 @@ namespace Okul.Business.Operations.Ders
             return true;
         }
 
+        public int Count()
+        {
+            return _repository.Count();
+        }
+
         public async Task<bool> DeleteDers(Dersler ders, bool softDelete = true)
         {
             _repository.Delete(ders, softDelete);

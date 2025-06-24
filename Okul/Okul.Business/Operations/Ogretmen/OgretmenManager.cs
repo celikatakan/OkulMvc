@@ -101,6 +101,11 @@ namespace Okul.Business.Operations.Ogretmen
         {
             return await _repository.GetAll().ToListAsync();
         }
+
+        public int Count()
+        {
+            return _repository.Count();
+        }
     }
 }
 

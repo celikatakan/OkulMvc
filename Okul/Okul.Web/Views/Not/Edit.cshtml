@@ -1,52 +1,667 @@
 ﻿@model Okul.Data.Models.Notlar
-
 @{
-    ViewData["Title"] = "Notu Güncelle";
+    ViewData["Title"] = "Not Güncelle";
 }
 
-<h2>@ViewData["Title"]</h2>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewData["Title"]</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-<form asp-action="Edit" method="post">
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2d3748;
+            margin-top: 70px; /* Mevcut navbar için */
+            padding: 2rem 0;
+        }
 
-    <div class="form-group">
-        <label asp-for="OgrenciId">Öğrenci</label>
-        <select asp-for="OgrenciId" asp-items="(SelectList)ViewBag.Ogrenciler" class="form-control">
-            <option value="">-- Öğrenci Seçiniz --</option>
-        </select>
-        <span asp-validation-for="OgrenciId" class="text-danger"></span>
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+            .header h1 {
+                color: white;
+                font-size: 2.5rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            }
+
+            .header p {
+                color: rgba(255,255,255,0.9);
+                font-size: 1.1rem;
+                font-weight: 300;
+            }
+
+        .form-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 3rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.2);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+            position: relative;
+            overflow: hidden;
+        }
+
+            .form-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+            }
+
+        .form-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .form-group {
+            margin-bottom: 2rem;
+            position: relative;
+        }
+
+            .form-group.full-width {
+                grid-column: 1 / -1;
+            }
+
+        .form-label {
+            display: block;
+            font-size: 0.9rem;
+            font-weight: 600;
+            color: #374151;
+            margin-bottom: 0.5rem;
+            transition: all 0.3s ease;
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+            color: #2d3748;
+        }
+
+            .form-control select {
+                padding-left: 3rem;
+            }
+
+            .form-control:focus {
+                outline: none;
+                border-color: #667eea;
+                background: white;
+                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            }
+
+                .form-control:focus + .input-icon {
+                    color: #667eea;
+                }
+
+        .input-icon {
+            position: absolute;
+            left: 1rem;
+            top: 2.2rem;
+            color: #94a3b8;
+            transition: all 0.3s ease;
+            z-index: 1;
+        }
+
+        .text-danger {
+            color: #ef4444;
+            font-size: 0.875rem;
+            margin-top: 0.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.25rem;
+        }
+
+            .text-danger::before {
+                content: '⚠';
+                font-size: 0.75rem;
+            }
+
+        .form-actions {
+            display: flex;
+            gap: 1rem;
+            margin-top: 3rem;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+            min-width: 140px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+            flex: 1;
+        }
+
+            .btn-primary:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+                color: white;
+                text-decoration: none;
+            }
+
+            .btn-primary:active {
+                transform: translateY(0);
+            }
+
+        .btn-secondary {
+            background: #f8fafc;
+            color: #64748b;
+            border: 2px solid #e2e8f0;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+            .btn-secondary:hover {
+                background: #e2e8f0;
+                color: #475569;
+                transform: translateY(-1px);
+                text-decoration: none;
+            }
+
+        .form-info {
+            background: linear-gradient(135deg, #f0f9ff, #e0f2fe);
+            border: 1px solid #bae6fd;
+            border-radius: 16px;
+            padding: 1.5rem;
+            margin-bottom: 2rem;
+            color: #0369a1;
+        }
+
+            .form-info i {
+                margin-right: 0.5rem;
+                color: #0284c7;
+            }
+
+        .required::after {
+            content: '*';
+            color: #ef4444;
+            margin-left: 0.25rem;
+        }
+
+        .loading-overlay {
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 24px;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .loading-spinner {
+            width: 40px;
+            height: 40px;
+            border: 4px solid #e2e8f0;
+            border-top: 4px solid #667eea;
+            border-radius: 50%;
+            animation: spin 1s linear infinite;
+        }
+
+        @@keyframes spin {
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
+        }
+
+        @@keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@keyframes shake {
+            0%, 100% {
+                transform: translateX(0);
+            }
+
+            25% {
+                transform: translateX(-5px);
+            }
+
+            75% {
+                transform: translateX(5px);
+            }
+        }
+
+        .error-shake {
+            animation: shake 0.5s ease-in-out;
+        }
+
+        @@media (max-width: 768px) {
+            .container {
+                padding: 0 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .form-card {
+                padding: 2rem;
+                border-radius: 16px;
+            }
+
+            .form-row {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+
+            .form-actions {
+                flex-direction: column;
+            }
+
+            .btn {
+                min-width: auto;
+            }
+        }
+
+        /* Animasyon sınıfları */
+        .form-group.has-error .form-control {
+            border-color: #ef4444;
+            background: #fef2f2;
+        }
+
+        .form-group.has-success .form-control {
+            border-color: #10b981;
+            background: #f0fdf4;
+        }
+
+        .form-group.has-success .input-icon {
+            color: #10b981;
+        }
+
+        .grade-input {
+            text-align: center;
+            font-weight: 600;
+            font-size: 1.1rem;
+        }
+
+        .grade-helper {
+            font-size: 0.8rem;
+            color: #64748b;
+            margin-top: 0.25rem;
+            text-align: center;
+        }
+
+        .average-display {
+            background: #f1f5f9 !important;
+            color: #2563eb !important;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-clipboard-list"></i> @ViewData["Title"]</h1>
+            <p>Öğrenci notlarını sisteme kaydedin</p>
+        </div>
+
+        <div class="form-card">
+            <div class="loading-overlay" id="loadingOverlay">
+                <div class="loading-spinner"></div>
+            </div>
+
+            <div class="form-info">
+                <i class="fas fa-info-circle"></i>
+                <strong>Bilgi:</strong> Tüm alanların doldurulması zorunludur. Notlar 0-100 arasında olmalıdır.
+            </div>
+
+            <form asp-action="Edit" method="post" id="notesForm" novalidate>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="OgrenciId" class="form-label required">Öğrenci</label>
+                        <div style="position: relative;">
+                            <i class="fas fa-user-graduate input-icon"></i>
+                            <select asp-for="OgrenciId" asp-items="(SelectList)ViewBag.Ogrenciler" class="form-control">
+                                <option value="">-- Öğrenci Seçiniz --</option>
+                            </select>
+                        </div>
+                        <span asp-validation-for="OgrenciId" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="DersId" class="form-label required">Ders</label>
+                        <div style="position: relative;">
+                            <i class="fas fa-book input-icon"></i>
+                            <select asp-for="DersId" asp-items="(SelectList)ViewBag.Dersler" class="form-control">
+                                <option value="">-- Ders Seçiniz --</option>
+                            </select>
+                        </div>
+                        <span asp-validation-for="DersId" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="Sinav1" class="form-label required">1. Sınav Notu</label>
+                        <div style="position: relative;">
+                            <i class="fas fa-edit input-icon"></i>
+                            <input asp-for="Sinav1" id="sinav1Input" class="form-control grade-input" type="number" min="0" max="100" step="0.01" placeholder="0-100" />
+                        </div>
+                        <div class="grade-helper">0-100 arası bir değer girin</div>
+                        <span asp-validation-for="Sinav1" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label asp-for="Sinav2" class="form-label required">2. Sınav Notu</label>
+                        <div style="position: relative;">
+                            <i class="fas fa-edit input-icon"></i>
+                            <input asp-for="Sinav2" id="sinav2Input" class="form-control grade-input" type="number" min="0" max="100" step="0.01" placeholder="0-100" />
+                        </div>
+                        <div class="grade-helper">0-100 arası bir değer girin</div>
+                        <span asp-validation-for="Sinav2" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label asp-for="FinalNotu" class="form-label required">Final Notu</label>
+                        <div style="position: relative;">
+                            <i class="fas fa-award input-icon"></i>
+                            <input asp-for="FinalNotu" id="finalInput" class="form-control grade-input" type="number" min="0" max="100" step="0.01" placeholder="0-100" />
+                        </div>
+                        <div class="grade-helper">0-100 arası bir değer girin</div>
+                        <span asp-validation-for="FinalNotu" class="text-danger"></span>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label">Ortalama</label>
+                        <div style="position: relative;">
+                            <i class="fas fa-calculator input-icon"></i>
+                            <input type="text" class="form-control grade-input average-display" id="averageDisplay" readonly placeholder="Otomatik hesaplanacak" />
+                        </div>
+                        <div class="grade-helper">Otomatik olarak hesaplanır</div>
+                    </div>
+                </div>
+
+                <div class="form-actions">
+                    <button type="submit" class="btn btn-primary" id="submitBtn">
+                        <i class="fas fa-save"></i>
+                        Not Güncelle
+                    </button>
+                    <a href="@Url.Action("Index")" class="btn btn-secondary">
+                        <i class="fas fa-arrow-left"></i>
+                        Geri Dön
+                    </a>
+                </div>
+            </form>
+        </div>
     </div>
 
-    <div class="form-group">
-        <label asp-for="DersId">Dersler</label>
-        <select asp-for="DersId" asp-items="(SelectList)ViewBag.Dersler" class="form-control">
-            <option value="">-- Ders Seçiniz --</option>
-        </select>
-        <span asp-validation-for="DersId" class="text-danger"></span>
-    </div>
+    <script>document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM loaded'); // Debug için
 
-    <div class="form-group">
-        <label asp-for="Sinav1"></label>
-        <input asp-for="Sinav1" class="form-control" />
-        <span asp-validation-for="Sinav1" class="text-danger"></span>
-    </div>
+            const form = document.getElementById('notesForm');
+            const submitBtn = document.getElementById('submitBtn');
+            const loadingOverlay = document.getElementById('loadingOverlay');
+            const averageDisplay = document.getElementById('averageDisplay');
 
-    <div class="form-group">
-        <label asp-for="Sinav2"></label>
-        <input asp-for="Sinav2" class="form-control" />
-        <span asp-validation-for="Sinav2" class="text-danger"></span>
-    </div>
-    <div class="form-group">
-        <label asp-for="FinalNotu"></label>
-        <input asp-for="FinalNotu" class="form-control" />
-        <span asp-validation-for="FinalNotu" class="text-danger"></span>
-    </div>
+            // Grade inputs for average calculation - ID ile seçim
+            const sinav1Input = document.getElementById('sinav1Input');
+            const sinav2Input = document.getElementById('sinav2Input');
+            const finalInput = document.getElementById('finalInput');
 
+            console.log('Inputs found:', sinav1Input, sinav2Input, finalInput); // Debug için
 
+            // Form validation
+            const inputs = form.querySelectorAll('input, select');
 
-    <button type="submit" class="btn btn-primary">Güncelle</button>
+            inputs.forEach(input => {
+                // Real-time validation
+                input.addEventListener('blur', function() {
+                    validateField(this);
+                });
 
-</form>
+                input.addEventListener('input', function() {
+                    if (this.parentElement.parentElement.classList.contains('has-error')) {
+                        validateField(this);
+                    }
+                });
+            });
+
+            // Calculate average when grades change - Hem input hem change event'leri
+            if (sinav1Input && sinav2Input && finalInput) {
+                sinav1Input.addEventListener('input', calculateAverage);
+                sinav1Input.addEventListener('change', calculateAverage);
+
+                sinav2Input.addEventListener('input', calculateAverage);
+                sinav2Input.addEventListener('change', calculateAverage);
+
+                finalInput.addEventListener('input', calculateAverage);
+                finalInput.addEventListener('change', calculateAverage);
+
+                console.log('Event listeners added'); // Debug için
+            } else {
+                console.error('Grade inputs not found!'); // Debug için
+            }
+
+            function calculateAverage() {
+                console.log('calculateAverage called'); // Debug için
+
+                const sinav1 = parseFloat(sinav1Input.value) || 0;
+                const sinav2 = parseFloat(sinav2Input.value) || 0;
+                const finalNotu = parseFloat(finalInput.value) || 0;
+
+                console.log('Values:', sinav1, sinav2, finalNotu); // Debug için
+
+                if (sinav1 > 0 || sinav2 > 0 || finalNotu > 0) {
+                    // Ortalama hesaplama formülü (örnek: %30 vize1 + %30 vize2 + %40 final)
+                    const average = (sinav1 * 0.3 + sinav2 * 0.3 + finalNotu * 0.4);
+                    averageDisplay.value = average.toFixed(2);
+                    console.log('Average calculated:', average.toFixed(2)); // Debug için
+                } else {
+                    averageDisplay.value = '';
+                    console.log('Average cleared'); // Debug için
+                }
+            }
+
+            // Form submit
+            form.addEventListener('submit', function(e) {
+                let isValid = true;
+
+                inputs.forEach(input => {
+                    if (!validateField(input)) {
+                        isValid = false;
+                    }
+                });
+
+                if (!isValid) {
+                    e.preventDefault();
+                    // Shake animation for invalid form
+                    document.querySelector('.form-card').classList.add('error-shake');
+                    setTimeout(() => {
+                        document.querySelector('.form-card').classList.remove('error-shake');
+                    }, 500);
+                    return;
+                }
+
+                // Show loading
+                loadingOverlay.style.display = 'flex';
+                submitBtn.disabled = true;
+                submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Güncelleniyor...';
+            });
+
+            function validateField(field) {
+                const fieldGroup = field.closest('.form-group');
+                const value = field.value.trim();
+                let isValid = true;
+                let errorMessage = '';
+
+                // Remove existing classes - null check ekle
+                if (fieldGroup) {
+                    fieldGroup.classList.remove('has-error', 'has-success');
+                } else {
+                    console.warn('fieldGroup not found for field:', field);
+                    return true; // Eğer fieldGroup bulunamazsa validasyonu geç
+                }
+
+                if (field.name === 'OgrenciId') {
+                    if (!value) {
+                        isValid = false;
+                        errorMessage = 'Öğrenci seçimi zorunludur.';
+                    }
+                }
+
+                if (field.name === 'DersId') {
+                    if (!value) {
+                        isValid = false;
+                        errorMessage = 'Ders seçimi zorunludur.';
+                    }
+                }
+
+                if (field.name === 'Sinav1' || field.name === 'Sinav2' || field.name === 'FinalNotu') {
+                    const numValue = parseFloat(value);
+                    if (!value) {
+                        isValid = false;
+                        errorMessage = 'Not alanı zorunludur.';
+                    } else if (isNaN(numValue) || numValue < 0 || numValue > 100) {
+                        isValid = false;
+                        errorMessage = 'Not 0-100 arasında olmalıdır.';
+                    }
+                }
+
+                // Update validation message
+                const errorSpan = fieldGroup ? fieldGroup.querySelector('.text-danger') : null;
+                if (errorSpan) {
+                    errorSpan.textContent = errorMessage;
+                }
+
+                // Add appropriate class
+                if (fieldGroup) {
+                    if (isValid && value) {
+                        fieldGroup.classList.add('has-success');
+                    } else if (!isValid) {
+                        fieldGroup.classList.add('has-error');
+                    }
+                }
+
+                return isValid;
+            }
+
+            // Prevent form resubmission
+            if (performance.navigation.type === performance.navigation.TYPE_BACK_FORWARD) {
+                loadingOverlay.style.display = 'none';
+                submitBtn.disabled = false;
+                submitBtn.innerHTML = '<i class="fas fa-save"></i> Not Güncelle';
+            }
+
+            // Focus animation
+            inputs.forEach(input => {
+                input.addEventListener('focus', function() {
+                    this.parentElement.style.transform = 'scale(1.02)';
+                    this.parentElement.style.transition = 'transform 0.2s ease';
+                });
+
+                input.addEventListener('blur', function() {
+                    this.parentElement.style.transform = 'scale(1)';
+                });
+            });
+
+            // Grade input restrictions
+            const gradeInputs = document.querySelectorAll('.grade-input');
+            gradeInputs.forEach(input => {
+                input.addEventListener('input', function() {
+                    let value = this.value;
+                    // Remove non-numeric characters except decimal point
+                    value = value.replace(/[^0-9.]/g, '');
+
+                    // Ensure only one decimal point
+                    const parts = value.split('.');
+                    if (parts.length > 2) {
+                        value = parts[0] + '.' + parts.slice(1).join('');
+                    }
+
+                    // Limit to 2 decimal places
+                    if (parts[1] && parts[1].length > 2) {
+                        value = parts[0] + '.' + parts[1].substring(0, 2);
+                    }
+
+                    // Ensure value is within range
+                    const numValue = parseFloat(value);
+                    if (numValue > 100) {
+                        value = '100';
+                    }
+
+                    this.value = value;
+                });
+            });
+        });</script>
+</body>
+</html>
 
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
 }

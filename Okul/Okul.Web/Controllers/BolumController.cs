@@ -17,14 +17,19 @@ namespace Okul.Web.Controllers
     public class BolumController : Controller
     {
         private readonly IBolumService _bolumService;
+        private readonly IOgrenciService _ogrenciService;
 
-        public BolumController(IBolumService bolumService)
+        public BolumController(IBolumService bolumService, IOgrenciService ogrenciService)
         {
             _bolumService = bolumService;
+            _ogrenciService = ogrenciService;
         }
 
         public async Task<IActionResult> Index()
         {
+
+            ViewBag.OgrenciSayisi = _ogrenciService.Count();
+            ViewBag.ToplamBolum = _bolumService.Count();
             var bolumler = await _bolumService.GetAllBolumler();
 
             return View(bolumler);

@@ -1,32 +1,564 @@
 ﻿@model IEnumerable<Okul.Data.Models.Bolumler>
-
 @{
     ViewBag.Title = "Bölüm Listesi";
 }
 
-<h2>Bölüm Listesi</h2>
-
-<p>
-    @Html.ActionLink("Yeni Bölüm Ekle", "Create", null, new { @class = "btn btn-primary" })
-</p>
-
-<table class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th>Bölüm Adı</th>
-            <th>İşlemler</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var bolumler in Model)
-        {
-            <tr>
-                <td>@bolumler.BolumAdi</td>
-                <td>     
-                    @Html.ActionLink("Düzenle", "Edit", new { id = bolumler.BolumId }, new { @class = "btn btn-warning btn-sm" }) |
-                    @Html.ActionLink("Sil", "Delete", new { id = bolumler.BolumId }, new { @class = "btn btn-danger btn-sm" })
-                </td>
-            </tr>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </tbody>
-</table>
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2d3748;
+            margin-top: 70px; /* Mevcut navbar için */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+            .header h1 {
+                color: white;
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            }
+
+            .header p {
+                color: rgba(255,255,255,0.9);
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.2);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+
+            .search-input:focus {
+                outline: none;
+                border-color: #667eea;
+                background: white;
+                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .add-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+            .add-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+                color: white;
+                text-decoration: none;
+            }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stats-item {
+            text-align: center;
+        }
+
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stats-label {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .departments-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .department-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+
+            .department-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+            }
+
+            .department-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+            }
+
+        .department-icon {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .department-name {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+            line-height: 1.3;
+        }
+
+        .department-info {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .department-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .edit-btn {
+            background: #f0f9ff;
+            color: #0369a1;
+            border: 1px solid #bae6fd;
+        }
+
+            .edit-btn:hover {
+                background: #0369a1;
+                color: white;
+                text-decoration: none;
+            }
+
+        .delete-btn {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+            .delete-btn:hover {
+                background: #dc2626;
+                color: white;
+                text-decoration: none;
+            }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #64748b;
+        }
+
+            .empty-state i {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                color: #cbd5e1;
+            }
+
+        .no-departments {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #64748b;
+            grid-column: 1 / -1;
+        }
+
+            .no-departments i {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                color: #cbd5e1;
+            }
+
+        .department-badge {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background: rgba(102, 126, 234, 0.1);
+            color: #667eea;
+            padding: 0.25rem 0.75rem;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            font-weight: 600;
+        }
+
+        @@keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            .top-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                max-width: none;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .departments-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .department-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-building"></i> Bölümler</h1>
+            <p>Akademik bölümlerin yönetim paneli</p>
+        </div>
+
+        <div class="content-card">
+            <div class="top-bar">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Bölüm ara..." id="searchInput">
+                </div>
+                @Html.ActionLink("Yeni Bölüm Ekle", "Create", null, new { @class = "add-btn" })
+            </div>
+
+            <div class="stats-bar">
+                <div class="stats-item">
+                    <div class="stats-number">@ViewBag.ToplamBolum</div>
+                    <div class="stats-label">Toplam Bölüm</div>
+                </div>
+
+                <div class="stats-item">
+                    <div class="stats-number">@ViewBag.OgrenciSayisi</div>
+                    <div class="stats-label">Toplam Öğrenci</div>
+                </div>
+            </div>
+
+            <div class="departments-grid" id="departmentsGrid">
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var bolum in Model)
+                    {
+                        var departmentIcon = GetDepartmentIcon(bolum.BolumAdi);
+                        var departmentType = GetDepartmentType(bolum.BolumAdi);
+
+                        <div class="department-card" data-name="@(bolum.BolumAdi?.ToLower() ?? "")">
+                            <div class="department-badge">@departmentType</div>
+                            <div class="department-icon">
+                                <i class="@departmentIcon"></i>
+                            </div>
+                            <div class="department-name">@(bolum.BolumAdi ?? "Bölüm Adı Belirtilmemiş")</div>
+                            <div class="department-info">
+                                <i class="fas fa-users"></i>
+                                <span>Bölüm Kodu: @(bolum.BolumId)</span>
+                            </div>
+                            <div class="department-actions">
+                                @Html.ActionLink("", "Edit", new { id = bolum.BolumId }, new { @class = "action-btn edit-btn", title = "Düzenle" })
+                                @Html.ActionLink("", "Delete", new { id = bolum.BolumId }, new { @class = "action-btn delete-btn", onclick = "return confirm('Bu bölümü silmek istediğinizden emin misiniz?')", title = "Sil" })
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="no-departments">
+                        <i class="fas fa-plus-circle"></i>
+                        <h3>Henüz bölüm eklenmemiş</h3>
+                        <p>İlk bölümünüzü eklemek için yukarıdaki "Yeni Bölüm Ekle" butonunu kullanın.</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <script>// Bölüm türü belirleme fonksiyonu
+        function getDepartmentType(departmentName) {
+            const name = departmentName.toLowerCase();
+            if (name.includes('mühendislik') || name.includes('engineering')) return 'Mühendislik';
+            if (name.includes('tıp') || name.includes('medical')) return 'Sağlık';
+            if (name.includes('edebiyat') || name.includes('dil')) return 'Sosyal';
+            if (name.includes('fen') || name.includes('matematik')) return 'Fen';
+            if (name.includes('sanat') || name.includes('müzik')) return 'Sanat';
+            if (name.includes('ekonomi') || name.includes('işletme')) return 'İdari';
+            return 'Genel';
+        }
+
+        // Bölüm ikonu belirleme fonksiyonu
+        function getDepartmentIcon(departmentName) {
+            const name = departmentName.toLowerCase();
+            if (name.includes('mühendislik')) return 'fas fa-cogs';
+            if (name.includes('tıp')) return 'fas fa-user-md';
+            if (name.includes('edebiyat')) return 'fas fa-book';
+            if (name.includes('fen')) return 'fas fa-flask';
+            if (name.includes('matematik')) return 'fas fa-calculator';
+            if (name.includes('sanat')) return 'fas fa-palette';
+            if (name.includes('müzik')) return 'fas fa-music';
+            if (name.includes('ekonomi')) return 'fas fa-chart-line';
+            if (name.includes('işletme')) return 'fas fa-briefcase';
+            if (name.includes('bilgisayar')) return 'fas fa-laptop-code';
+            return 'fas fa-graduation-cap';
+        }
+
+        // Arama fonksiyonu
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const departmentCards = document.querySelectorAll('.department-card');
+            let visibleCount = 0;
+
+            departmentCards.forEach(card => {
+                const departmentName = card.getAttribute('data-name') || '';
+
+                if (departmentName.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Arama sonucu bulunamazsa boş durum göster
+            const departmentsGrid = document.getElementById('departmentsGrid');
+            const existingEmptyState = document.querySelector('.search-empty-state');
+
+            if (visibleCount === 0 && searchTerm !== '') {
+                if (!existingEmptyState) {
+                    const emptyState = document.createElement('div');
+                    emptyState.className = 'empty-state search-empty-state';
+                    emptyState.style.gridColumn = '1 / -1';
+                    emptyState.innerHTML = `
+                        <i class="fas fa-search"></i>
+                        <h3>Arama sonucu bulunamadı</h3>
+                        <p>"${searchTerm}" için eşleşen bölüm bulunamadı.</p>
+                    `;
+                    departmentsGrid.appendChild(emptyState);
+                }
+            } else if (existingEmptyState) {
+                existingEmptyState.remove();
+            }
+        });
+
+        // Kartlara tıklama animasyonu
+        document.querySelectorAll('.department-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('.department-actions')) {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }
+            });
+        });
+
+        // Action butonlarına icon ekleme
+        document.addEventListener('DOMContentLoaded', function() {
+            const editButtons = document.querySelectorAll('.edit-btn');
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+
+            editButtons.forEach(btn => {
+                btn.innerHTML = '<i class="fas fa-edit"></i> Düzenle';
+            });
+
+            deleteButtons.forEach(btn => {
+                btn.innerHTML = '<i class="fas fa-trash"></i> Sil';
+            });
+
+            // Bölüm kartlarına dinamik ikonlar ekleme
+            document.querySelectorAll('.department-card').forEach(card => {
+                const departmentName = card.querySelector('.department-name').textContent;
+                const iconElement = card.querySelector('.department-icon i');
+                const badgeElement = card.querySelector('.department-badge');
+
+                iconElement.className = getDepartmentIcon(departmentName);
+                badgeElement.textContent = getDepartmentType(departmentName);
+            });
+        });</script>
+</body>
+</html>
+
+@functions {
+    public string GetDepartmentIcon(string departmentName)
+    {
+        if (string.IsNullOrEmpty(departmentName)) return "fas fa-graduation-cap";
+
+        var name = departmentName.ToLower();
+        if (name.Contains("mühendislik")) return "fas fa-cogs";
+        if (name.Contains("tıp")) return "fas fa-user-md";
+        if (name.Contains("edebiyat")) return "fas fa-book";
+        if (name.Contains("fen")) return "fas fa-flask";
+        if (name.Contains("matematik")) return "fas fa-calculator";
+        if (name.Contains("sanat")) return "fas fa-palette";
+        if (name.Contains("müzik")) return "fas fa-music";
+        if (name.Contains("ekonomi")) return "fas fa-chart-line";
+        if (name.Contains("işletme")) return "fas fa-briefcase";
+        if (name.Contains("bilgisayar")) return "fas fa-laptop-code";
+        return "fas fa-graduation-cap";
+    }
+
+    public string GetDepartmentType(string departmentName)
+    {
+        if (string.IsNullOrEmpty(departmentName)) return "Genel";
+
+        var name = departmentName.ToLower();
+        if (name.Contains("mühendislik") || name.Contains("engineering")) return "Mühendislik";
+        if (name.Contains("tıp") || name.Contains("medical")) return "Sağlık";
+        if (name.Contains("edebiyat") || name.Contains("dil")) return "Sosyal";
+        if (name.Contains("fen") || name.Contains("matematik")) return "Fen";
+        if (name.Contains("sanat") || name.Contains("müzik")) return "Sanat";
+        if (name.Contains("ekonomi") || name.Contains("işletme")) return "İdari";
+        return "Genel";
+    }
+}

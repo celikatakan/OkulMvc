@@ -106,6 +106,11 @@ namespace Okul.Business.Operations.Not
                                     .Include(x => x.Ders)
                                     .ToListAsync();
         }
+
+        public int Count()
+        {
+            return _repository.Count();
+        }
     }
 }
 

@@ -18,6 +18,8 @@ namespace Okul.Data.Repository
         TEntity Get(Expression<Func<TEntity, bool>> predicate);
 
         IQueryable<TEntity> GetAll(Expression<Func<TEntity, bool>> predicate = null);
+
+        int Count(Expression<Func<TEntity, bool>> predicate = null);
     }
 }
 

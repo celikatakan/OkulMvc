@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Okul.Business.Operations.Bolum;
 using Okul.Business.Operations.Bolum.Dtos;
+using Okul.Business.Operations.Ders;
 using Okul.Business.Operations.Ogretmen;
 using Okul.Business.Operations.Ogretmen.Dtos;
 using Okul.Data.Models;
@@ -16,14 +17,22 @@ namespace Okul.Web.Controllers
     public class OgretmenController : Controller
     {
         private readonly IOgretmenService _ogretmenService;
+        private readonly IDersService _dersService;
+        private readonly IBolumService _bolumService;
 
-        public OgretmenController(IOgretmenService ogretmenService)
+        public OgretmenController(IOgretmenService ogretmenService, IDersService dersService, IBolumService bolumService)
         {
             _ogretmenService = ogretmenService;
+            _dersService = dersService;
+            _bolumService = bolumService;
         }
 
         public async Task<IActionResult> Index()
         {
+            ViewBag.ToplamOgretmen = _ogretmenService.Count();
+            ViewBag.AktifDers = _dersService.Count();
+            ViewBag.BolumSayisi = _bolumService.Count();
+
             var ogretmenler = await _ogretmenService.GetAllOgretmenler();
 
             return View(ogretmenler);

@@ -43,6 +43,11 @@ namespace Okul.Business.Operations.Bolum
             return true;
         }
 
+        public int Count()
+        {
+            return _repository.Count();
+        }
+
         public async Task<bool> DeleteBolum(Bolumler bolum, bool softDelete = true)
         {
             _repository.Delete(bolum, softDelete);

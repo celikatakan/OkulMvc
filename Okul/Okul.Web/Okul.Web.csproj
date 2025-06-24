@@ -22,6 +22,7 @@
     <None Remove="Views\Ogretmen\" />
     <None Remove="Views\Ders\" />
     <None Remove="Views\Not\" />
+    <None Remove="Models\ViewModels\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Views\Ogrenci\" />
@@ -29,5 +30,6 @@
     <Folder Include="Views\Ogretmen\" />
     <Folder Include="Views\Ders\" />
     <Folder Include="Views\Not\" />
+    <Folder Include="Models\ViewModels\" />
   </ItemGroup>
 </Project>

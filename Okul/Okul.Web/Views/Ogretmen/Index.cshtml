@@ -1,34 +1,484 @@
 ﻿@model IEnumerable<Okul.Data.Models.Ogretmenler>
-
 @{
     ViewBag.Title = "Öğretmenler Listesi";
 }
 
-<h2>Öğretmen Listesi</h2>
-
-<p>
-    @Html.ActionLink("Yeni Öğretmen Ekle", "Create", null, new { @class = "btn btn-primary" })
-</p>
-
-<table class="table table-striped table-bordered">
-    <thead>
-        <tr>
-            <th>Adı ve Soyadı</th>
-            <th>Eposta</th>
-            <th>İşlemler</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var ogretmenler in Model)
-        {
-            <tr>
-                <td>@ogretmenler.AdSoyad</td>
-                <td>@ogretmenler.Eposta</td>
-                <td>
-                    @Html.ActionLink("Düzenle", "Edit", new { id = ogretmenler.OgretmenId }, new { @class = "btn btn-warning btn-sm" }) |
-                    @Html.ActionLink("Sil", "Delete", new { id = ogretmenler.OgretmenId }, new { @class = "btn btn-danger btn-sm" })
-                </td>
-            </tr>
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-    </tbody>
-</table>
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            color: #2d3748;
+            margin-top: 70px; /* Mevcut navbar için */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 3rem;
+            animation: fadeInDown 0.8s ease-out;
+        }
+
+            .header h1 {
+                color: white;
+                font-size: 3rem;
+                font-weight: 700;
+                margin-bottom: 0.5rem;
+                text-shadow: 0 4px 8px rgba(0,0,0,0.3);
+            }
+
+            .header p {
+                color: rgba(255,255,255,0.9);
+                font-size: 1.2rem;
+                font-weight: 300;
+            }
+
+        .content-card {
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(20px);
+            border-radius: 24px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.1), 0 0 0 1px rgba(255,255,255,0.2);
+            animation: fadeInUp 0.8s ease-out 0.2s both;
+        }
+
+        .top-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+
+        .search-container {
+            position: relative;
+            flex: 1;
+            max-width: 400px;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 1rem 1rem 1rem 3rem;
+            border: 2px solid #e2e8f0;
+            border-radius: 16px;
+            font-size: 1rem;
+            transition: all 0.3s ease;
+            background: #f8fafc;
+        }
+
+            .search-input:focus {
+                outline: none;
+                border-color: #667eea;
+                background: white;
+                box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+            }
+
+        .search-icon {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #94a3b8;
+        }
+
+        .add-btn {
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            color: white;
+            border: none;
+            padding: 1rem 2rem;
+            border-radius: 16px;
+            font-size: 1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            text-decoration: none;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.3);
+        }
+
+            .add-btn:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 20px rgba(102, 126, 234, 0.4);
+                color: white;
+                text-decoration: none;
+            }
+
+        .teachers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .teacher-card {
+            background: white;
+            border-radius: 20px;
+            padding: 2rem;
+            box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+            transition: all 0.3s ease;
+            border: 1px solid rgba(0,0,0,0.05);
+            position: relative;
+            overflow: hidden;
+        }
+
+            .teacher-card::before {
+                content: '';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                height: 4px;
+                background: linear-gradient(135deg, #667eea, #764ba2);
+            }
+
+            .teacher-card:hover {
+                transform: translateY(-8px);
+                box-shadow: 0 16px 40px rgba(0,0,0,0.15);
+            }
+
+        .teacher-avatar {
+            width: 64px;
+            height: 64px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 1rem;
+        }
+
+        .teacher-name {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: #2d3748;
+            margin-bottom: 0.5rem;
+        }
+
+        .teacher-email {
+            color: #64748b;
+            font-size: 0.95rem;
+            margin-bottom: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .teacher-actions {
+            display: flex;
+            gap: 0.75rem;
+        }
+
+        .action-btn {
+            flex: 1;
+            padding: 0.75rem 1rem;
+            border: none;
+            border-radius: 12px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            text-align: center;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 0.5rem;
+        }
+
+        .edit-btn {
+            background: #f0f9ff;
+            color: #0369a1;
+            border: 1px solid #bae6fd;
+        }
+
+            .edit-btn:hover {
+                background: #0369a1;
+                color: white;
+                text-decoration: none;
+            }
+
+        .delete-btn {
+            background: #fef2f2;
+            color: #dc2626;
+            border: 1px solid #fecaca;
+        }
+
+            .delete-btn:hover {
+                background: #dc2626;
+                color: white;
+                text-decoration: none;
+            }
+
+        .stats-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 2rem;
+            padding: 1.5rem;
+            background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+            border-radius: 16px;
+            border: 1px solid #e2e8f0;
+        }
+
+        .stats-item {
+            text-align: center;
+        }
+
+        .stats-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+
+        .stats-label {
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #64748b;
+        }
+
+            .empty-state i {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                color: #cbd5e1;
+            }
+
+        .no-teachers {
+            text-align: center;
+            padding: 4rem 2rem;
+            color: #64748b;
+            grid-column: 1 / -1;
+        }
+
+            .no-teachers i {
+                font-size: 4rem;
+                margin-bottom: 1rem;
+                color: #cbd5e1;
+            }
+
+        @@keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @@media (max-width: 768px) {
+            .container {
+                padding: 1rem;
+            }
+
+            .header h1 {
+                font-size: 2rem;
+            }
+
+            .content-card {
+                padding: 1.5rem;
+                border-radius: 16px;
+            }
+
+            .top-bar {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .search-container {
+                max-width: none;
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .teachers-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .teacher-actions {
+                flex-direction: column;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1><i class="fas fa-chalkboard-teacher"></i> Öğretmenler</h1>
+            <p>Eğitim kadromuzun yönetim paneli</p>
+        </div>
+
+        <div class="content-card">
+            <div class="top-bar">
+                <div class="search-container">
+                    <i class="fas fa-search search-icon"></i>
+                    <input type="text" class="search-input" placeholder="Öğretmen ara..." id="searchInput">
+                </div>
+                @Html.ActionLink("Yeni Öğretmen Ekle", "Create", null, new { @class = "add-btn" })
+            </div>
+
+            <div class="stats-bar">
+                <div class="stats-item">
+                    <div class="stats-number">@ViewBag.ToplamOgretmen</div>
+                    <div class="stats-label">Toplam Öğretmen</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-number">@ViewBag.AktifDers</div>
+                    <div class="stats-label">Aktif Ders</div>
+                </div>
+                <div class="stats-item">
+                    <div class="stats-number">@ViewBag.BolumSayisi</div>
+                    <div class="stats-label">Bölüm</div>
+                </div>
+            </div>
+
+            <div class="teachers-grid" id="teachersGrid">
+                @if (Model != null && Model.Any())
+                {
+                    @foreach (var ogretmen in Model)
+                    {
+                        var initials = "";
+                        if (!string.IsNullOrEmpty(ogretmen.AdSoyad))
+                        {
+                            var nameParts = ogretmen.AdSoyad.Split(' ');
+                            initials = string.Join("", nameParts.Select(part => part.FirstOrDefault().ToString().ToUpper()).Take(2));
+                        }
+
+                        <div class="teacher-card" data-name="@(ogretmen.AdSoyad?.ToLower() ?? "")">
+                            <div class="teacher-avatar">@initials</div>
+                            <div class="teacher-name">@(ogretmen.AdSoyad ?? "Ad Soyad Belirtilmemiş")</div>
+                            <div class="teacher-email">
+                                <i class="fas fa-envelope"></i>
+                                @(ogretmen.Eposta ?? "Email Belirtilmemiş")
+                            </div>
+                            <div class="teacher-actions">
+                                @Html.ActionLink("", "Edit", new { id = ogretmen.OgretmenId }, new { @class = "action-btn edit-btn", title = "Düzenle" })
+                                @Html.ActionLink("", "Delete", new { id = ogretmen.OgretmenId }, new { @class = "action-btn delete-btn", onclick = "return confirm('Bu öğretmeni silmek istediğinizden emin misiniz?')", title = "Sil" })
+                            </div>
+                        </div>
+                    }
+                }
+                else
+                {
+                    <div class="no-teachers">
+                        <i class="fas fa-user-plus"></i>
+                        <h3>Henüz öğretmen eklenmemiş</h3>
+                        <p>İlk öğretmeninizi eklemek için yukarıdaki "Yeni Öğretmen Ekle" butonunu kullanın.</p>
+                    </div>
+                }
+            </div>
+        </div>
+    </div>
+
+    <script>// Arama fonksiyonu
+        document.getElementById('searchInput').addEventListener('input', function(e) {
+            const searchTerm = e.target.value.toLowerCase();
+            const teacherCards = document.querySelectorAll('.teacher-card');
+            let visibleCount = 0;
+
+            teacherCards.forEach(card => {
+                const teacherName = card.getAttribute('data-name') || '';
+                const teacherEmail = card.querySelector('.teacher-email').textContent.toLowerCase();
+
+                if (teacherName.includes(searchTerm) || teacherEmail.includes(searchTerm)) {
+                    card.style.display = 'block';
+                    visibleCount++;
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+
+            // Arama sonucu bulunamazsa boş durum göster
+            const teachersGrid = document.getElementById('teachersGrid');
+            const existingEmptyState = document.querySelector('.search-empty-state');
+
+            if (visibleCount === 0 && searchTerm !== '') {
+                if (!existingEmptyState) {
+                    const emptyState = document.createElement('div');
+                    emptyState.className = 'empty-state search-empty-state';
+                    emptyState.style.gridColumn = '1 / -1';
+                    emptyState.innerHTML = `
+                        <i class="fas fa-search"></i>
+                        <h3>Arama sonucu bulunamadı</h3>
+                        <p>"${searchTerm}" için eşleşen öğretmen bulunamadı.</p>
+                    `;
+                    teachersGrid.appendChild(emptyState);
+                }
+            } else if (existingEmptyState) {
+                existingEmptyState.remove();
+            }
+        });
+
+        // Kartlara tıklama animasyonu
+        document.querySelectorAll('.teacher-card').forEach(card => {
+            card.addEventListener('click', function(e) {
+                if (!e.target.closest('.teacher-actions')) {
+                    this.style.transform = 'scale(0.98)';
+                    setTimeout(() => {
+                        this.style.transform = '';
+                    }, 150);
+                }
+            });
+        });
+
+        // Action butonlarına icon ekleme
+        document.addEventListener('DOMContentLoaded', function() {
+            const editButtons = document.querySelectorAll('.edit-btn');
+            const deleteButtons = document.querySelectorAll('.delete-btn');
+
+            editButtons.forEach(btn => {
+                btn.innerHTML = '<i class="fas fa-edit"></i> Düzenle';
+            });
+
+            deleteButtons.forEach(btn => {
+                btn.innerHTML = '<i class="fas fa-trash"></i> Sil';
+            });
+        });</script>
+</body>
+</html>

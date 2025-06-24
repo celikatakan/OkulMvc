@@ -14,6 +14,7 @@ namespace Okul.Business.Operations.Ders
         Dersler GetById(int id);
         Task<bool> UpdateDers(UpdateDersDto ders);
         Task<bool> DeleteDers(Dersler ders, bool softDelete = true);
+        int Count();
     }
 }
 

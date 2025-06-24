@@ -47,6 +47,11 @@ namespace Okul.Business.Operations.Ogrenci
             return true;
         }
 
+        public int Count()
+        {
+            return _repository.Count();
+        }
+
         public async Task<bool> DeleteOgrenci(Ogrenciler ogrenci, bool softDelete = true)
         {
             _repository.Delete(ogrenci, softDelete);

@@ -13,6 +13,8 @@ namespace Okul.Business.Operations.Bolum
         Task<bool> UpdateBolum(UpdateBolumDto bolum);
         Bolumler GetById(int id);
         Task<bool> DeleteBolum(Bolumler bolum, bool softDelete = true);
+
+        int Count();
     }
 }
 

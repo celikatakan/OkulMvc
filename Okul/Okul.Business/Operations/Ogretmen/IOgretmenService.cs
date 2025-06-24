@@ -14,6 +14,7 @@ namespace Okul.Business.Operations.Ogretmen
         Task<bool> UpdateOgretmen(UpdateOgretmenDto ogretmen);
         Task<bool> DeleteOgretmen(Ogretmenler ogretmen, bool softDelete = true);
         Task<IEnumerable<Ogretmenler>> GetAllAsync();
+        int Count();
     }
 }
 

@@ -29,6 +29,8 @@ namespace Okul.Web.Controllers
 
         public async Task<ActionResult> Index()
         {
+            ViewBag.AktifDers = _dersService.Count();
+            ViewBag.ToplamOgretmen = _ogretmenService.Count();
             var dersler = await _dersService.GetAllDersler();
             return View(dersler);
         }

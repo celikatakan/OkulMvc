@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Okul.Business.Operations;
 using Okul.Business.Operations.Bolum;
+using Okul.Business.Operations.Ders;
 using Okul.Business.Operations.Ogrenci;
 using Okul.Business.Operations.Ogrenci.Dtos;
 using Okul.Data.Models;
@@ -21,15 +22,20 @@ namespace Okul.Web.Controllers
     {
         private readonly IOgrenciService _ogrenciService;
         private readonly IBolumService _bolumService;
+        private readonly IDersService _dersService;
 
-        public OgrenciController(IOgrenciService ogrenciService, IBolumService bolumService)
+        public OgrenciController(IOgrenciService ogrenciService, IBolumService bolumService, IDersService dersService)
         {
             _ogrenciService = ogrenciService;
             _bolumService = bolumService;
+            _dersService = dersService;
         }
 
         public async Task<ActionResult> Index()
         {
+            ViewBag.ToplamOgrenci = _ogrenciService.Count();
+            ViewBag.AktifDers = _dersService.Count();
+            ViewBag.BolumSayisi = _bolumService.Count(); 
             var ogrenciler = await _ogrenciService.GetAllOgrenciler();
             return View(ogrenciler);
         }

@@ -15,6 +15,7 @@ namespace Okul.Business.Operations.Not
         Task<bool> UpdateNot(UpdateNotDto not);
         Task<bool> DeleteNot(Notlar not, bool softDelete = true);
         Task<IEnumerable<Notlar>> GetAllAsync();
+        int Count();
     }
 }
 
